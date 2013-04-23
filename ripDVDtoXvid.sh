@@ -100,21 +100,24 @@ if [ $DVDMOUNTPOINTPARAMVALID ]; then
         logText "PROCESS FINISHED ..."
 
         if [ $EMAIL ]; then
-            logText "mail 1"
+            #debug output	
+            #logText "mail 1"
             mail -s "ripDVDtoXvid finished $VOLUMENAME" $EMAIL < $LOGFILE
         fi
     elif [ $COUNTER -eq 50 ]; then
         logText "COUNTER LIMIT HIT ..."
 
         if [ $EMAIL ]; then
-            logText "mail 2"
+            #debug output
+            #logText "mail 2"
             mail -s "ripDVDtoXvid failed as the counter limit was hit ..." $EMAIL < $LOGFILE
         fi
     fi
 else
     logText "WRONG DVD PARAMETER SET \"$DVDMOUNTPOINT\" ..."
     if [ $EMAIL ]; then
-        logText "mail 3"
+        #debug output
+        #logText "mail 3"
         mail -s "ripDVDtoXvid failed as the parameter provided was wrong ..." $EMAIL < $LOGFILE
     fi
 fi
