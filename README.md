@@ -1,7 +1,7 @@
 # ripDVDtoXvid
 
 ## description
-rip dvd to a target folder and send an email when done
+rip a dvd (using mencoder) to a target folder and send an email when done
 
 ## usage
 run the script and pass a mount point 
